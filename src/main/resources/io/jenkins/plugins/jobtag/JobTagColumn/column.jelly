@@ -1,0 +1,19 @@
+<?jelly escape-by-default="true"?>
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
+    <td>
+        <j:forEach var="e" items="${job.getProperties()}">
+
+            <j:if test="${e.getValue().getClass().getName().equals('io.jenkins.plugins.jobtag.JobTagPublisher')}">
+
+                <j:forEach var="tag" items="${e.getValue().getTags()}">
+                    <j:if test="${!tag.value.isEmpty()}">
+                        <pre><button style="-moz-border-radius:6px;-ms-border-radius:6px;-o-border-radius:6px;-webkit-border-radius:6px;border-radius:6px!important;">${tag.value}</button> </pre>
+                    </j:if>
+                </j:forEach>
+
+            </j:if>
+        </j:forEach>
+
+    </td>
+</j:jelly>
+

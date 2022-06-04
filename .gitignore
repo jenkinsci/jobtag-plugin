@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+work
+target
+*.iml
+.classpath
+.factorypath
+.project
+org.eclipse.*
