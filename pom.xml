@@ -38,6 +38,7 @@
 
     <name>Job Tags</name>
     <description>Add multiple tags to any job and display in list view</description>
+    <url>https://github.com/nistal97/jobtag-plugin/blob/master/README.md</url>
 
     <licenses>
         <license>
@@ -69,7 +70,7 @@
         </developer>
     </developers>
 
-    <url>https://github.com/nistal97/jobtag-plugin/blob/master/CHANGELOG.md</url>
+
 
 </project>
 
