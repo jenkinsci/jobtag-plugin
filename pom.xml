@@ -15,7 +15,7 @@
     <packaging>hpi</packaging>
 
     <properties>
-        <changelist>1.0-SNAPSHOT</changelist>
+        <changelist>999999-SNAPSHOT</changelist>
         <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
         <jenkins.version>2.277.1</jenkins.version>
         <!-- Java Level to use. Java 7 required when using core >= 1.612 -->
@@ -33,6 +33,7 @@
         <connection>scm:git:git://github.com/jenkinsci/jobtag-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/jobtag-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/jobtag-plugin</url>
+        <tag>${scmTag}</tag>
     </scm>
 
     <name>Job Tags</name>

@@ -1,5 +1,4 @@
 # Job Tag plugin for Jenkins
-=============================
 
 [![Build Status](https://ci.jenkins.io/job/Plugins/job/jobtag-plugin/job/master/badge/icon)](https://ci.jenkins.io/job/Plugins/job/jobtag-plugin/job/master/)
 
