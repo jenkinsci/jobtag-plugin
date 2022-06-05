@@ -28,6 +28,13 @@
      -->
     </properties>
 
+    <scm>
+        <connection>scm:git:git://github.com/jenkinsci/jobtag-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jenkinsci/jobtag-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/jobtag-plugin</url>
+        <tag>jobtag-1.0</tag>
+    </scm>
+
     <name>Job Tags</name>
     <description>Add multiple tags to any job and display in list view</description>
 
