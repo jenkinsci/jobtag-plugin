@@ -1,6 +1,8 @@
 # Job Tag plugin for Jenkins
 
 [![Build Status](https://ci.jenkins.io/job/Plugins/job/jobtag-plugin/job/master/badge/icon)](https://ci.jenkins.io/job/Plugins/job/jobtag-plugin/job/master/)
+[![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/jobtag.svg)](https://plugins.jenkins.io/jobtag)
+
 
 Job tag plugin is one simple plugin to help user to add multiple tags to job configuration, and display in list view.
 
