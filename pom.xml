@@ -38,7 +38,7 @@
 
     <name>Job Tags</name>
     <description>Add multiple tags to any job and display in list view</description>
-    <url>https://github.com/nistal97/jobtag-plugin/</url>
+    <url>https://github.com/jenkinsci/jobtag-plugin/</url>
 
     <licenses>
         <license>
