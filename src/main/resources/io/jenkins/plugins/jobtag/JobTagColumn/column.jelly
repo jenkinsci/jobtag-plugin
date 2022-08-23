@@ -7,7 +7,7 @@
 
                 <j:forEach var="tag" items="${e.getValue().getTags()}">
                     <j:if test="${!tag.value.isEmpty()}">
-                        <pre><button style="-moz-border-radius:6px;-ms-border-radius:6px;-o-border-radius:6px;-webkit-border-radius:6px;border-radius:6px!important;">${tag.value}</button> </pre>
+                        <pre><button style="-moz-border-radius:6px;-ms-border-radius:6px;-o-border-radius:6px;-webkit-border-radius:6px;border-radius:6px!important;background-color:${tag.color}">${tag.value}</button> </pre>
                     </j:if>
                 </j:forEach>
 
