@@ -1,9 +1,12 @@
 package io.jenkins.plugins.jobtag;
 
 import hudson.Extension;
+import hudson.model.AbstractDescribableImpl;
 import hudson.model.Job;
 import hudson.model.JobProperty;
 import hudson.model.JobPropertyDescriptor;
+import jenkins.model.GlobalConfiguration;
+import jenkins.model.Jenkins;
 import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
@@ -59,8 +62,10 @@ public class JobTagPublisher extends JobProperty<Job<?, ?>> {
                 return null;
             }
 
+            TagConfigure configure = TagConfigure.get();
+            LOGGER.info("caseSensitive:" + configure.isCaseSenstive());
             for (JobTag tag : tpp.tags) {
-                tag.setValue(tag.getValue().toUpperCase());
+                tag.setValue(configure.isCaseSenstive() ? tag.getValue() : tag.getValue().toUpperCase());
             }
 
             return tpp;

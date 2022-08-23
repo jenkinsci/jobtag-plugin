@@ -16,7 +16,7 @@ public class JobTag extends AbstractDescribableImpl<JobTag> implements Serializa
 
     @DataBoundConstructor
     public JobTag(String value) {
-        this.value = value.toUpperCase();
+        this.value = value;
     }
 
     public String getValue() {
