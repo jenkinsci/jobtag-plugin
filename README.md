@@ -13,6 +13,8 @@ Job tag plugin is one simple plugin to help user to add multiple tags to job con
 - Integration: Other systems could get job list based on tag query, provided sample script
 GitHub users to have commit permission
 
+![](images/listview.png)
+  
 ### Configuration
 
 - Click "Edit Job Tags" and "Add New Tags" button will appear.
@@ -23,9 +25,9 @@ GitHub users to have commit permission
 
   ![](images/edittag2.png)
 
-- Then you can view job tags in main view.
+- You may customize tag UI options in global configuration
 
-  ![](images/listview.png)
+  ![](images/option.png)
 
 ### Filter jobs by tags by running script in console or remote execute
 

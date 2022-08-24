@@ -12,7 +12,7 @@ class JobTag @DataBoundConstructor
 constructor(@set:DataBoundSetter
             var value: String?) : AbstractDescribableImpl<JobTag>(), Serializable {
 
-    var color = "#FFFFFF"
+    var color = DEFAULT_COLOR
 
     override fun equals(o: Any?): Boolean {
         if (this === o) return true
@@ -38,6 +38,7 @@ constructor(@set:DataBoundSetter
     companion object {
 
         private const val serialVersionUID = -5667326362260252552L
+        const val DEFAULT_COLOR = "#FFFFFF"
     }
 
 }

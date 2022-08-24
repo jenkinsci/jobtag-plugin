@@ -22,6 +22,11 @@ class TagConfigure : GlobalConfiguration(), PersistentDescriptor {
     @set:Synchronized
     var isCaseSenstive = false
 
+    @get:Synchronized
+    @set:DataBoundSetter
+    @set:Synchronized
+    var disableColor = false
+
     override fun configure(req: StaplerRequest, json: JSONObject?): Boolean {
         try {
             BulkChange(this).use { bc ->
@@ -43,6 +48,7 @@ class TagConfigure : GlobalConfiguration(), PersistentDescriptor {
         val file = configFile
         if (!file.exists()) {
             isCaseSenstive = false
+            disableColor = false
         } else {
             super.load()
         }

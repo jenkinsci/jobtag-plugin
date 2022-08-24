@@ -50,8 +50,8 @@ constructor() : JobProperty<Job<*, *>>() {
             val configure = TagConfigure.get()
             for (tag in tpp.tags) {
                 tag.value = if (configure.isCaseSenstive) tag.value else tag.value!!.toUpperCase()
-                colorStack.putIfAbsent(tag.value!!, "#" + (Random().nextInt(8388607) + 8388607).toString(16))
-                tag.color = colorStack.getOrDefault(tag.value!!, "#FFFFFF")
+                colorStack.putIfAbsent(tag.value!!, if (configure.disableColor) JobTag.DEFAULT_COLOR else "#" + (Random().nextInt(8388607) + 8388607).toString(16))
+                tag.color = if (configure.disableColor) JobTag.DEFAULT_COLOR else colorStack.getOrDefault(tag.value!!, JobTag.DEFAULT_COLOR)
             }
 
             return tpp
