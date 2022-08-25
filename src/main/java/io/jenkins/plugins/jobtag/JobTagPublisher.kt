@@ -69,6 +69,34 @@ constructor() : JobProperty<Job<*, *>>() {
         private val LOGGER = Logger.getLogger(JobTagPublisher::class.java.name)
 
         val colorStack = ConcurrentHashMap<String, String>()
+
+        init {
+            loadColorStack()
+        }
+
+        fun clearColorStack() {
+            colorStack.clear()
+            val jobs = Jenkins.get().getAllItems(Job::class.java)
+            for (job in jobs) {
+                var tagRecord = job.getProperty("io.jenkins.plugins.jobtag.JobTagPublisher") as JobTagPublisher?
+                tagRecord?.tags?.forEach({
+                    it.color = JobTag.DEFAULT_COLOR
+                })
+                tagRecord?.let {
+                    job.save()
+                }
+            }
+        }
+
+        fun loadColorStack() {
+            val jobs = Jenkins.get().getAllItems(Job::class.java)
+            for (job in jobs) {
+                var tagRecord = job.getProperty("io.jenkins.plugins.jobtag.JobTagPublisher") as JobTagPublisher?
+                tagRecord?.tags?.forEach({
+                    colorStack.putIfAbsent(it.value!!, it.color)
+                })
+            }
+        }
     }
 
 

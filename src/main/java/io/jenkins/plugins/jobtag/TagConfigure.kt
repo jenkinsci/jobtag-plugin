@@ -62,6 +62,11 @@ class TagConfigure : GlobalConfiguration(), PersistentDescriptor {
 
         try {
             configFile.write(this)
+            if (disableColor) {
+                JobTagPublisher.clearColorStack()
+            } else {
+                JobTagPublisher.loadColorStack()
+            }
         } catch (e: IOException) {
             LOGGER.log(Level.WARNING, "Failed to save $configFile", e)
         }
